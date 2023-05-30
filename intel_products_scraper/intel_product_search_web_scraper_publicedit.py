@@ -127,7 +127,7 @@ if __name__ == "__main__":
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     # client terms list to loop through
-    terms = ["'black%20list'", 'blacklist', "'white%20list'", 'whitelist', 'master', 'slave'] #terms can either be directly added into a list or put into an outside file to load as an argument for automation
+    terms = ['processor','future', "'cutting%20edge'"] #terms can either be directly added into a list or put into an outside file to load as an argument for automation
     web_driver_file_location = r'C:\Users\insert_file_path_here_for_web_driver'
     results_df = selenium_bs4_extractor(terms, web_driver_file_location)
     output_file_location = r'C:\Users\insert_file_path_here'
