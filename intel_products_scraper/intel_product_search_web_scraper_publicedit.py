@@ -118,7 +118,7 @@ def selenium_bs4_extractor(terms, web_driver_file_location):
             page_counter += 1
             # print(page_counter)
 
-        #intermediate_terms_df.to_csv(rf'C:\Users\dlabban\OneDrive - Intel Corporation\Desktop\Data Engineering GIG\output\debugging_inclusive_language_scraper_{term}.csv', encoding='utf-8') #for troubleshooting, optional
+        #intermediate_terms_df.to_csv(INSERT_PATH_HERE_IF_DESIRED, encoding='utf-8') #for troubleshooting, optional
         driver.close()
     return results_df
 
