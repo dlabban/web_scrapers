@@ -12,7 +12,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning) #filters pandas .
 from selenium import webdriver
 
 
-#web-scraping extractor for product data
+#web-scraping extractor for product data -- specify terms internally or via external document to feed in
 def selenium_bs4_extractor(terms, web_driver_file_location):
     results_df = pd.DataFrame()
     for term in terms:
