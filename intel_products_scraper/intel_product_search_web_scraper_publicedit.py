@@ -12,7 +12,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning) #filters pandas .
 from selenium import webdriver
 
 
-#web-scraping extractor for product data -- specify terms internally or via external document to feed in
+#web-scraping extractor for product data - specify terms internally or via external document to feed in
 def selenium_bs4_extractor(terms, web_driver_file_location):
     results_df = pd.DataFrame()
     for term in terms:
@@ -27,7 +27,7 @@ def selenium_bs4_extractor(terms, web_driver_file_location):
         X_Path_Next_Page = '//*[@id="result-section"]/div[9]/ul/li[8]/span'
         time.sleep(5)
         soup=BeautifulSoup(driver.page_source,'html.parser')
-        page_counter = 1
+        page_counter = 1 #used for T/S purposes and error tracking
         try:
             max_page_count_combined = soup.find('li', {'class': 'coveo-pager-total', 'style':'display: inline-block;'}).text
             max_page_count = int(re.sub('of','', str(max_page_count_combined))) + 1
